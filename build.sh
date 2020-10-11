@@ -8,7 +8,9 @@ apt-get install -y \
 
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -;
 
-apt-get install -y docker-ce docker-ce-cli containerd.io;
+add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable";
+apt update -y;
+apt install -y docker-ce;
 
 groupadd docker;
 
