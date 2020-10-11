@@ -11,9 +11,6 @@ services:
       - ./.envs/.local/.rocket
     links:
       - db
-    # diesel infer_schema macro gives warnings with this flag.
-    # environment:
-    #   - CARGO_INCREMENTAL=1
     command: bash -c "bash ./wait-for-it.sh db:5432 -q -- diesel setup && cargo update && cargo watch -x run"
 
   db:
