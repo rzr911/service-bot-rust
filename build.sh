@@ -6,7 +6,7 @@ apt-get install -y \
     gnupg-agent \
     software-properties-common;
 
-curl -o https://download.docker.com/linux/ubuntu/dists/focal/pool/stable/amd64/docker-ce_19.03.13~3-0~ubuntu-focal_amd64.deb;
+curl  https://download.docker.com/linux/ubuntu/dists/focal/pool/stable/amd64/docker-ce_19.03.13~3-0~ubuntu-focal_amd64.deb;
 dpkg -i ./docker-ce_19.03.13~3-0~ubuntu-focal_amd64.deb;
 
 usermod -aG docker $USER;
