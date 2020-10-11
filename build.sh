@@ -12,10 +12,6 @@ add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu fo
 apt update -y;
 apt install -y docker-ce;
 
-groupadd docker;
-
-usermod -aG docker $USER;
-newgrp docker;
 
 curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose;
 chmod +x /usr/local/bin/docker-compose;
